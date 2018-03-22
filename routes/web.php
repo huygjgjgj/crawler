@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('wordpress', 'MyController@Getmetadata');
+Route::get('wordpress', ['as'=>'wordpress' ,'uses'=> 'MyController@Getmetadata']);
 
 
